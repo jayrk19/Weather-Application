@@ -16,7 +16,7 @@ function App() {
         <Input long={long} setLong={setLong} lat={lat} setLat={setLat} clicked={clicked} setClicked={setClicked}/>
       </div>
       {clicked===true && 
-        <Output long={long} setLong={setLong} lat={lat} setLat={setLat}/>
+        <Output long={long} setLong={setLong} lat={lat} setLat={setLat} clicked={clicked} setClicked={setClicked}/>
 
       }
     </div>

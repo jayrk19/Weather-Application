@@ -1,8 +1,8 @@
 export default function Input({ lat, setLat, setLong, long,clicked,setClicked}) {
   function handleClick(e) {
-    // setLong((document.getElementById('longInput').value = 0));
+    
     document.getElementById('longInput').value = 0;
-    // setLat((document.getElementById('latInput').value = 0));
+    
     document.getElementById('latInput').value = 0;
     // console.log("input :",lat,long)
     setClicked(true);
