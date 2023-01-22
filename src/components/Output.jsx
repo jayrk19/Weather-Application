@@ -10,7 +10,6 @@ export default function Output({ lat, setLat, setLong, long }) {
   useEffect(()=>{
     fetchingAPI();
   },[])
-  console.log(data)
 
   return (
     <>
