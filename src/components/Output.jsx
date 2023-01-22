@@ -5,7 +5,7 @@ export default function Output({ lat, setLat, setLong, long }) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=81c2336ccda201c6ed2f51bce57e3bb3`;
     return fetch(url)
       .then((response) => response.json())
-      .then((d) => setData(prevData=>[...prevData,d]));
+      .then((d) => setData([d]));
   };
   useEffect(()=>{
     fetchingAPI();
@@ -14,7 +14,13 @@ export default function Output({ lat, setLat, setLong, long }) {
 
   return (
     <>
-      {/* <h1>{s}</h1> */}
+      {data && data.length>0 && 
+        data.map(ele=>{
+          return(
+            <h1>{ele.main.temp}</h1>
+          )
+        })
+      }
     </>
   );
 }
