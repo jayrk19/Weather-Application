@@ -10,13 +10,15 @@ export default function Output({ lat, setLat, setLong, long }){
     
   };
 
-
+  let s= "";
   const res =  fetchingAPI();
-  res.then(res=>console.log(res))
-  
+  res.then(r=>console.log(r))
+  // s = `Weather at ${res.name}, is ${res.sys.country} is ${res.weather[0].description} with temp as ${res.main.temp}`;
+  let name = res.name;
+  console.log(name)
   return (
   <>
-    
+    <h1>{s}</h1>
   
   
   </>);
