@@ -16,7 +16,7 @@ export default function Output({ lat, setLat, setLong, long }) {
       {data && data.length>0 && 
         data.map(ele=>{
           return(
-            <h1>{ele.main.temp}</h1>
+            <h3>{`For Country ${ele.sys.country}, City ${ele.name} ,Temperature is ${ele.main.temp} with description as ${ele.weather[0].description}`}</h3>
           )
         })
       }
