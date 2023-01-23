@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-export default function Output({ lat, setLat, setLong, long,setClicked }) {
+export default function Output({ lat, setLat, setLong, long,clicked }) {
   const [data, setData] = useState([]);
   const fetchingAPI = () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=81c2336ccda201c6ed2f51bce57e3bb3`;
@@ -9,7 +9,7 @@ export default function Output({ lat, setLat, setLong, long,setClicked }) {
   };
   useEffect(()=>{
     fetchingAPI();
-  },[])
+  },[clicked])
   // setLong((document.getElementById('longInput').value = 0));
   // setLat((document.getElementById('latInput').value = 0));
   // setClicked(false);

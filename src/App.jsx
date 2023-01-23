@@ -7,7 +7,7 @@ import Output from './components/Output';
 function App() {
   const [long, setLong] = useState(0);
   const [lat, setLat] = useState(0);
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(0);
 
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
       <div className="input">
         <Input long={long} setLong={setLong} lat={lat} setLat={setLat} clicked={clicked} setClicked={setClicked}/>
       </div>
-      {clicked===true && 
+      {clicked!==0 && 
         <Output long={long} setLong={setLong} lat={lat} setLat={setLat} clicked={clicked} setClicked={setClicked}/>
 
       }

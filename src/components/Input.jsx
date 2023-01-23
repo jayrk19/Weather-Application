@@ -5,7 +5,7 @@ export default function Input({ lat, setLat, setLong, long,clicked,setClicked}) 
     
     document.getElementById('latInput').value = 0;
     // console.log("input :",lat,long)
-    setClicked(true);
+    setClicked(prev=>prev+1);
   }
   return (
     <>
