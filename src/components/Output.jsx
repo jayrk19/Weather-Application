@@ -10,8 +10,8 @@ export default function Output({ lat, setLat, setLong, long,setClicked }) {
   useEffect(()=>{
     fetchingAPI();
   },[])
-  setLong((document.getElementById('longInput').value = 0));
-  setLat((document.getElementById('latInput').value = 0));
+  // setLong((document.getElementById('longInput').value = 0));
+  // setLat((document.getElementById('latInput').value = 0));
   // setClicked(false);
   return (
     <>
